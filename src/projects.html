@@ -1,0 +1,58 @@
+---
+layout: default
+title: projects.
+path: projects
+---
+
+<section class="pt-12 px-10 md:px-20">
+  <div class="items-center">
+      <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+        <h1 class="text-left text-4xl tracking-tight font-light">
+          <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+            {{title}}
+          </strong>
+        </h1>          <p class="mb-4">Hello! My name is Jess, and I enjoy all things data. My interest in data started in 2017 when I joined a strategy, and consulting firm focused on Qlik implementation. </p>
+          </p>
+      </div>
+  </div>
+  </section>
+
+  {% if projects.items %}
+  <div class="container">
+    <div class="flex flex-wrap mx-10 lg:-mx-4">
+      
+      {% for item in projects.items %}
+        <!-- Column -->
+        <div class="my-2 px-1 w-full md:w-1/2 lg:my-4 lg:px-4">
+
+            <!-- Article -->
+            <article class="overflow-hidden rounded-lg shadow-lg bg-gray-800">
+
+                <a href="#">
+                    <img alt="Placeholder" class="block h-90 w-full" src="{{item.image}}">
+                </a>
+
+                <header class="flex items-center justify-between mt-3 lg:mt-5 mb-2 mx-4">
+                    <h1 class="text-lg mb-0">
+                        <a class="no-underline hover:underline text-white" href="{{item.link}}">
+                          {{ item.text }}
+                        </a>
+                    </h1>
+                    <p class="text-sm text-white">
+                        {{ item.type }}
+                    </p>
+                </header>
+
+                <p class="mx-4 mb-4">
+                  {{item.desc}}
+                </p>
+            </article>
+            <!-- END Article -->
+
+        </div>
+        <!-- END Column -->
+        
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

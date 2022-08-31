@@ -5,9 +5,12 @@ module.exports = {
       center: true,
     },
     extend: {
-      colors: {},
+      colors: {
+        'prussian-blue': '#172A3A',
+      },
     },
   },
   variants: {},
   plugins: [require("@tailwindcss/typography")],
 };
+

@@ -1,0 +1,10 @@
+---
+items:
+  - text: Introduction to DAX in Power BI
+    desc: "Enhance your Power BI knowledge, by learning the fundamentals of Data Analysis Expressions (DAX) such as calculated columns, tables, and measures."
+    time: "2"
+    link: "https://app.datacamp.com/learn/courses/introduction-to-dax-in-power-bi"
+  - text: "Case Study: HR Analytics in Power BI"
+    desc: "Apply your skills to import, analyze and visualize Human Resources (HR) data using Power BI."
+    time: "3"
+    link: "https://app.datacamp.com/learn/courses/case-study-hr-analytics-in-power-bi"

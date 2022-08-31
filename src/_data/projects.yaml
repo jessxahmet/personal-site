@@ -1,0 +1,12 @@
+---
+items:
+  - text: The Fun Factory.
+    desc: "Teddington's #1 Party Shop wanted to bring their website into"
+    type: "web dev"
+    image: "../static/img/thefunfactory.png"
+    link: "/"
+  - text: Shelle Luscombe.
+    desc: "abc"
+    type: "web dev"
+    image: "../static/img/shelleluscombe.png"
+    link: "/"

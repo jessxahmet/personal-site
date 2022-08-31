@@ -1,12 +1,24 @@
 ---
-title: Our Blog
+title: writing.
 layout: default
 ---
 
-<div class="container max-w-3xl mt-6 px-6">
+<section class="pt-10 px-10 md:px-20">
+  <div class="items-center">
+      <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+        <h1 class="text-left text-4xl tracking-tight font-light">
+          <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+            {{title}}
+          </strong>
+        </h1>
+          <p class="mb-4">
+              Since we all learn in different ways, I'd like to use my blog to teach new concepts for those who do not easily engage with video content that we deliver on DataCamp.
+          </p>
+      </div>
+  </div>
 
-    <h1 class="font-bold text-5xl">{{title}}</h1>
+  {{ content | safe }}
 
-    {{ content | safe }}
+</section>
 
-</div>
+

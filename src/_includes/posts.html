@@ -2,20 +2,23 @@
 layout: default
 prism: true
 ---
-
-<div class="container max-w-4xl mt-6  px-6">
-    <div class="pb-5 mb-5 border-b border-gray-100">
-        <h1 class="font-bold text-5xl">{{title}}</h1>
-        <p class="text-center text-base leading-6 font-medium text-gray-500">
-            <time> {{ date | readableDate }}
-                by
-                <a>{{ author }}</a>
-
-            </time>
-        </p>
-
+<section class="pt-10 px-20">
+    <div class="py-8 px-4 sm:py-16 lg:px-6">
+        <div class="">
+            <h2 class="mb-4 text-4xl tracking-tight font-light text-white">{{title}}</h2>
+            <p class="text-base leading-6 font-medium text-gray-500 mb-4">
+                <time> {{ date | readableDate }}
+                </time>
+            </p>
+            <article class="prose-invert prose font-light text-gray-500 sm:text-xl ">
+                {{ content | safe }}
+            </article>
+            
+            <a href="/blog" class="text-white flex flex-center mt-10">
+                <svg id="Icons" class="w-5 h-5 mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm6,12H8.414l2.293,2.293a1,1,0,1,1-1.414,1.414l-4-4a1,1,0,0,1,0-1.414l4-4a1,1,0,1,1,1.414,1.414L8.414,11H18a1,1,0,0,1,0,2Z"/></svg>
+                Read more posts.
+              </a>
+              
+        </div>
     </div>
-    <article class="prose lg:prose-xl my-4 mx-auto">
-        {{ content | safe }}</article>
-
-</div>
+</section>

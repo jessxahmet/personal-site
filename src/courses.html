@@ -1,0 +1,74 @@
+---
+layout: default
+title: courses.
+path: courses
+---
+
+<section class="pt-10 px-10 md:px-20">
+  <div class="items-center mb-8">
+      <div class="font-light  sm:text-lg text-gray-400">
+        <h1 class="text-left text-4xl tracking-tight font-light">
+          <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+            {{title}}
+          </strong>
+        </h1>
+          <p class="mb-4">
+            I love sharing my passion for data analytics, business intelligence and data visualization. Which is why in March 2022, I joined DataCamp to help them deliver courses on BI & Data Skills. 
+          </p>
+      </div>
+  </div>
+
+  <div class="items-center">
+    <div class="font-light sm:text-lg text-gray-400">
+      <h1 class="text-left text-2xl tracking-tight font-light">
+        <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+          courses i've led
+        </strong>
+      </h1>         
+    </div>
+
+    {% if courses.items %}
+    <div>
+      <div class="flex flex-wrap -mx-1 lg:-mx-4">
+        {% for item in courses.items %}
+           <!-- Column -->
+           <div class="my-2 px-1 w-full lg:my-4 lg:px-4 lg:w-1/2">
+  
+            <!-- Article -->
+            <article class="overflow-hidden rounded-lg shadow-lg p-2 bg-gray-800">
+  
+                <header class="justify-between leading-tight p-2 md:p-4">
+                    <p class="text-center no-underline text-gray-200 lg:text-2xl mb-2">
+                      {{ item.text}}
+                    </p>
+          
+                <p class="text-grey-darker text-sm">
+                  {{item.desc}}
+                </p>
+                </header>
+  
+                <footer class="flex items-center justify-between leading-none p-2 md:px-4">
+                  <div class="flex"><svg viewBox="0 0 18 18" aria-hidden="true" class="css-j8t4qt-CourseCard" height="18" role="img" width="18"><path fill="currentColor" d="M7.98 9.022L8 4.995a1 1 0 012 .01l-.016 3.022H12a1 1 0 010 2H8.98a1 1 0 01-1-1.005zM9 16A7 7 0 109 2a7 7 0 000 14zm0 2A9 9 0 119 0a9 9 0 010 18z" fill-rule="evenodd"></path></svg><span class="ml-2">{{item.time}} Hours</span></div>
+  
+                  <a href="{{item.link}}" target="_blank" class="px-4 bg-indigo-600 rounded-md py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"> Take the course →</button>
+  
+                </footer>
+  
+            </article>
+            <!-- END Article -->
+  
+          </div>
+          <!-- END Column -->
+
+          {% endfor %}
+
+          {% endif %}
+  
+        
+      </div>
+  </div>
+</div>
+
+  </section>
+
+
